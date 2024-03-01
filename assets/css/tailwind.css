@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --border: #d4d4d8;
+  }
+  .dark {
+    --border: #27272a;
+  }
+  * {
+    @apply border-border selection:bg-sky-500 selection:text-zinc-50 dark:selection:bg-sky-400 dark:selection:text-zinc-950;
+  }
+  body {
+    @apply bg-zinc-50 text-zinc-950 transition-colors dark:bg-zinc-950 dark:text-zinc-50;
+  }
+  .grid-bg {
+    background-size: 60px 60px;
+    background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  }
+}
